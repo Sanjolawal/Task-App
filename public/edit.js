@@ -21,7 +21,7 @@ const Updating = () => {
     body: JSON.stringify({ task: Input2.value }),
   });
   const popUp = document.querySelector(`.popUp`);
-  popUp.style.color = `red`;
+  popUp.style.color = `green`;
   popUp.style.display = `block`;
   setTimeout(() => {
     popUp.style.display = `none`;

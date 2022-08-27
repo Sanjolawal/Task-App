@@ -1,20 +1,21 @@
 body {
-  /* background: red; */
+  background: rgb(191,44,121);
   display: grid;
   justify-items: center;
 }
 .firstDiv {
-  background: white;
+  background:linear-gradient(to bottom right, rgb(65,24,104) 40%, rgb(23,28,48)) ;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
   display: grid;
   justify-items: center;
   width: 30%;
   padding-bottom: 3vh;
   margin-top: 3vh;
+  color:white;
 }
 .btn {
-  color: white;
-  background: rgb(50, 113, 200);
+  background: rgb(191,44,121);
+  color:white;
   border-radius: 1px;
   border: none;
   text-align: center;
@@ -30,7 +31,10 @@ body {
   align-items: center;
   padding: 0vh 1vw 0vh 1vw;
   margin-top: 2.5vh;
+  color:white;
+  background:linear-gradient(to bottom right, rgb(23,28,48) 35%, rgb(65,24,104) ) ;
 }
+
 /* .thirdDiv {
   display: flex;
   justify-self: end;
@@ -44,7 +48,7 @@ h2 {
 .icon:hover,
 .icon1:hover {
   cursor: pointer;
-  background: rgb(20, 120, 230);
+    background: white;
 }
 #taskContainer {
   width: 34%;
@@ -55,13 +59,19 @@ h2 {
   display: block;
   padding: 0 0 0 2.5vw;
   justify-items: center;
-  /* display: none; */
+  background:white;
+  color:rgb(23,28,48);
 }
 h1 {
   text-align: center;
+  color:white;
+}
+.editH1 {
+  text-align: center;
+  color:rgb(23,28,48);
 }
 .editBtn {
-  background: rgb(20, 50, 200);
+  background: rgb(65,24,104);
   color: white;
   width: 80%;
   border: none;
