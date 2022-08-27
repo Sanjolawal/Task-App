@@ -68,15 +68,19 @@ const showTasks = (e) => {
     //Runs when user inputted a task
 
     // SENDING USER INPUTTED TASK OR VALUE TO SERVER, TO SAVE TO A MONGODB DATABASE
-    fetch(`/api`, {
-      method: `POST`,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ task: input.value }),
-    });
-    // DATA SENT AND SAVED
-    Run();
+    const test = async () => {
+      await fetch(`/api`, {
+        method: `POST`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ task: input.value }),
+      });
+      // DATA SENT AND SAVED
+      Run();
+    };
+    test();
+    input.value = ``;
   }
 };
 btn.addEventListener(`click`, showTasks);

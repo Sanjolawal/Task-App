@@ -2,7 +2,6 @@ const path = require(`path`);
 
 const collection = require(path.resolve(`server.js`));
 
-
 const tasksSent = (req, res) => {
   const { task } = req.body;
   collection.create({ task: task });
