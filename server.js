@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const dotenv = require("dotenv");
-const test = require(`./ServerRoutes/tes`);
 
 dotenv.config();
 
@@ -29,11 +28,11 @@ async function main() {
     const collection = mongoose.model("collection", structure);
     module.exports = collection;
     const router = require("./ServerRoutes/route");
-    app.use(express.static(__dirname, +"public"));
+    app.use(express.static("public"));
     app.use("/api", express.json());
     app.use(router);
-  } catch {
-    console.log(" Database error");
+  } catch (error) {
+    console.log(error);
   }
 }
 

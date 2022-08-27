@@ -9,22 +9,15 @@ const {
   deleteSingleTask,
 } = require(`./controllers/routes`);
 
-router.get("/", (req, res) => {
-  res.sendFile(path.resolve(`dynamic/index.html`));
-});
-
-router.get("/edit.html", (req, res) => {
-  res.sendFile(path.resolve("dynamic/edit.html"));
-});
 router.route(`/api`).get(tasksList).post(tasksSent);
 router
   .route(`/api/:id`)
-  .post(singleTask)
+  .get(singleTask)
   .put(updateSingleTask)
   .delete(deleteSingleTask);
 
 router.use((req, res) => {
-  res.sendFile(path.resolve(`dynamic/error.html`));
+  res.status(404).sendFile(path.resolve(`public/error.html`));
 });
 
 module.exports = router;

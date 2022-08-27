@@ -52,10 +52,10 @@ h2 {
 .editDiv {
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
   width: 20%;
-  /* display:grid; */
+  display: block;
   padding: 0 0 0 2.5vw;
   justify-items: center;
-  display: none;
+  /* display: none; */
 }
 h1 {
   text-align: center;
@@ -72,8 +72,14 @@ h1 {
 .editBtn:hover {
   background: rgb(50, 60, 90);
 }
-.backBtn {
+.popUp {
   display: none;
+  font-size: clamp(24px, 1.6vw, 1.7vw)
+  margin: 0;
+  padding: 0;
+}
+.backBtn {
+  display: grid;
   background: rgb(50, 60, 90);
   color: white;
   border: none;
